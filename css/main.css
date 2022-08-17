@@ -129,6 +129,8 @@ body {
 }
 .button-secondary:hover, .button-secondary:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
 }
 
 .button-hero {
@@ -278,6 +280,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color var(--transition-dur-and-func);
+  resize: none;
 }
 .modal-form-message:focus {
   outline: none;
@@ -312,7 +315,7 @@ body {
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-color: var(--accent-color);
   border: var(--accent-color);
-  background-image: url(../imadges/form-check.svg);
+  background-image: url(../images/form-check.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -696,29 +699,30 @@ body {
   margin-bottom: 4px;
 }
 
-.portfolio__sphere {
+.portfolio__description {
   color: var(--primary-text-color);
   line-height: 1.89;
   text-align: left;
 }
 
-.portfolio {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  list-style: none;
 }
 
-.portfolio-card {
+.portfolio__item {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.portfoliocard__wrapper {
+.portfolio__link {
   display: block;
   text-decoration: none;
   transition: box-shadov var(--transition-dur-and-func);
   cursor: pointer;
 }
-.portfoliocard__wrapper:hover, .portfoliocard__wrapper:focus {
+.portfolio__link:hover, .portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -732,12 +736,12 @@ body {
   border-right: 1px solid #EEEEEE;
 }
 
-.portfoliocard__imgwrapper {
+.portfolio__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.portfoliocard__imgwrapper-overlay {
+.portfolio__overlay {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -754,7 +758,7 @@ body {
   padding-right: 24px;
   background-color: rgba(32, 148, 243, 0.9);
 }
-.portfoliocard__wrapper:hover .portfoliocard__imgwrapper-overlay, .portfoliocard__wrapper:focus .portfoliocard__imgwrapper-overlay {
+.portfolio__thumb:hover .portfolio__overlay, .portfolio__thumb:focus .portfolio__overlay {
   transform: translate(0, 0);
 }
 
@@ -816,7 +820,7 @@ body {
   margin: 0 auto;
 }
 
-.card__footer {
+.container__footer {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -854,10 +858,10 @@ body {
   text-decoration: none;
 }
 
-.footer-list {
+.footer__list {
   list-style: none;
 }
-.footer-list:not(:last-child) {
+.footer__list:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -874,13 +878,13 @@ body {
   margin-right: 93px;
 }
 
-.social-network-list {
+.card__sn {
   display: flex;
   justify-content: center;
   list-style: none;
 }
 
-.social-network-item:not(:last-child) {
+.card__social:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -894,7 +898,7 @@ body {
   margin-bottom: 20px;
 }
 
-.social-network-icon {
+.sn-icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
@@ -907,7 +911,7 @@ body {
   background-color: var(--accent-color);
 }
 
-.social-nerwork-link {
+.card__sn-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -920,11 +924,11 @@ body {
 }
 
 /* футер - частина Підпишіться на розсилку */
-.footer-form {
+.form {
   display: flex;
 }
 
-.footer-form-text {
+.form__text {
   color: var(--primary-bg-color);
   font-weight: 700;
   font-size: 14px;
@@ -963,7 +967,7 @@ body {
   line-height: 1.25;
 }
 
-.footer-form-submit {
+.form__button {
   font-weight: 700;
   display: inline-flex;
   font-size: 16px;
