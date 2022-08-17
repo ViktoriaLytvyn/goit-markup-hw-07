@@ -18,23 +18,24 @@
     margin-bottom: 4px;
 }
 
-.portfolio__sphere {
+.portfolio__description {
     color: var(--primary-text-color);
     line-height: 1.89;
     text-align: left;
 }
 
-.portfolio {
+.portfolio__list {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    list-style: none;
 }
 
-.portfolio-card {
+.portfolio__item {
     flex-basis: calc((100% - 60px) / 3);
 }
 
-.portfoliocard__wrapper {
+.portfolio__link {
     display: block;
     text-decoration: none;
     transition: box-shadov var(--transition-dur-and-func);
@@ -56,12 +57,12 @@
     border-right: 1px solid #EEEEEE;
 }
 
-.portfoliocard__imgwrapper {
+.portfolio__thumb {
     position: relative;
     overflow: hidden;
 }
 
-.portfoliocard__imgwrapper-overlay {
+.portfolio__overlay {
     position: absolute;
     left: 0px;
     top: 0px;
@@ -78,8 +79,8 @@
     padding-right: 24px;
     background-color: rgba(32, 148, 243, 0.9);
 
-    .portfoliocard__wrapper:hover &,
-    .portfoliocard__wrapper:focus & {
+    .portfolio__thumb:hover &,
+    .portfolio__thumb:focus & {
         transform: translate(0, 0);
     }
 }
